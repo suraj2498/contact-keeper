@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://SurajKumar:abcd1234@registration-project-cluster-jlcts.mongodb.net/contact-keeper?retryWrites=true&w=majority",
+    "jwtSecret": "websecret"
+}
