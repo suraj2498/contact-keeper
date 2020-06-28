@@ -11,11 +11,11 @@ const ContactSchema = mongoose.Schema({
         required: true
     },
     email: {
-        type: String,
-        required: true,
+        type: String
     },
     phone:{
         type: String,
+        reuired: true
     },
     type: {
         type: String,

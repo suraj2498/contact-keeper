@@ -19,7 +19,7 @@ app.use('/api/users', require('./Routes/users'));
 app.use('/api/contacts', require('./Routes/contacts'));
 app.use('/api/auth', require('./Routes/auth'));
 
-// Serve Static Assets Production
+// Serve Static Assets **Production**
 if(process.env.NODE_ENV === 'production'){
     // Set static folder
     app.use(express.static('client/build'));
