@@ -12,6 +12,7 @@ const Register = (props) => {
 
     useEffect(() => {
 
+        // Redirect to /
         if(isAuthenticated) {
             props.history.push('/')
         }

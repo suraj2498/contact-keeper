@@ -36,9 +36,14 @@ router.post('/', [
             password
         });
 
+        // Encrypting the password
         const salt = await bcryptjs.genSalt(10);
         user.password = await bcryptjs.hash(password, salt);
+
+        // Save user
+        await user.save();
         
+        // Handling the JWT
         const payload = {
             user: {
                 id: user.id
@@ -52,9 +57,6 @@ router.post('/', [
             if(err) throw err;
             res.json({ token });
         });
-
-        // Save user
-        await user.save();
 
     } catch(err) {
         console.error(err.message);

@@ -14,8 +14,8 @@ const { findById } = require('../Models/User');
 router.get('/', auth, async (req,res) => {
     // Find all contacts that are associated with current user id
     try {
+        // set contacts to array of contacts whose user matches the user.id returned by Mongo from contact DB
         const contacts = await Contact.find({ user: req.user.id }).sort({name: 1});
-
         res.json(contacts)
     } catch (err) {
         console.error(err.message);
